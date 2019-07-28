@@ -13,7 +13,7 @@ This can be reduced, if the machine uses a combination of biometric data and sto
 
 Whenever a candidate recieves a vote, which is determined by the press of the button, the tally corresponding to that particular candidate is incremented by 1. We use time stamps to periodically append the modified record to the block chain. 
 
-We will need to create a key map asswociating each key with the particular candidate. As with the case of any standard keyboard, we use a function that detects key press to update the tally of the candidate with whom the key is mapped. 
+We will need to create a key map associating each key with the particular candidate. As with the case of any standard keyboard, we use a function that detects key press to update the tally of the candidate with whom the key is mapped. 
 
 The records shall be accessible only by the authorized members of the election commission, who can access it but not modify it. They shall have read permission. 
 
