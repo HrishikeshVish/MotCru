@@ -11,6 +11,13 @@ Our main concern is to make the machines foolproof. As in, they should not, for 
 
 This can be reduced, if the machine uses a combination of biometric data and storage of records that contain the votes that each candidate has recieved on block chain.
 
-Whenever a candidate recieves a vote, which is determined by the press of the button, the tally corresponding to that particular candidate is incremented by 1. We use time stamps to periodically append the modified record to the block chain.
+Whenever a candidate recieves a vote, which is determined by the press of the button, the tally corresponding to that particular candidate is incremented by 1. We use time stamps to periodically append the modified record to the block chain. 
 
-The records shall be accessible only by the authorized members of the election commission, who can access it but not modify it. They shall have read permission.
+We will need to create a key map asswociating each key with the particular candidate. As with the case of any standard keyboard, we use a function that detects key press to update the tally of the candidate with whom the key is mapped. 
+
+The records shall be accessible only by the authorized members of the election commission, who can access it but not modify it. They shall have read permission. 
+
+To ensure that the entire set up is foolproof, we will need a dedicated Operating Systems, not unlike the ones they have implemented in medical instruments. The operating system shall have no user interface. It shall, for all purposes be inaccessible, save for the tech support. On startup, the tally application, which will be the only application on the OS, shall be invoked. 
+The block chain is accessed to see if there are any records present. The most recently accessed record is retrieved and the tally shall commence. 
+
+In case there's a software failure or the internet connection is temporarily lost, the most recently created record present on the chain is retrieved. The count is compared with the manual tally recorded by the machine. Any discrepancy is fixed by replacing the data on the record with the one manually stored in the machine.  
